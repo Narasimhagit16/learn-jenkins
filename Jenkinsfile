@@ -39,7 +39,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh """
-                  echo " hi again"
+                  echo " hi     again"
                   echo "$GREETING"
                 """
             }
