@@ -4,6 +4,11 @@ pipeline {
             label 'AGENT-1'
         }
     }
+    options {
+        timeout(time: 1, unit : SECONDS)
+        disableConcurrentBuilds()
+        
+    }
     environment{
         GREETING= "Hello Jenkins"
     }
