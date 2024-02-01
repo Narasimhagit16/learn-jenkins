@@ -21,8 +21,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 """
-                  echo ' hi again'
-                  echo $GREETING
+                  echo " hi again"
+                  echo "$GREETING"
                 """
             }
         }
