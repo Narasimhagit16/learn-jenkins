@@ -46,21 +46,18 @@ pipeline {
         }
 
         stage('check parms')
+        {
             steps {
-                sh """ 
-                    echo "Hello ${params.PERSON}"
-
-                    echo "Biography: ${params.BIOGRAPHY}"
-
-                    echo "Toggle: ${params.TOGGLE}"
-
-                    echo "Choice: ${params.CHOICE}"
-
+                sh """  
+                  echo "Hello ${params.PERSON}"
+                  echo "Biography: ${params.BIOGRAPHY}"
+                  echo "Toggle: ${params.TOGGLE}"
                     echo "Password: ${params.PASSWORD}"
-                """"
+                """
             }
 
     } 
+    }
     post { 
         always { 
             echo 'I will always say Hello again!'
